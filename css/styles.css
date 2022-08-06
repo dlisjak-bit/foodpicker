@@ -4,7 +4,7 @@
     height: 300%;
 }
 
-.btn-lg {
+.gumbvelik {
     height:100px;
     width: 600px;
     padding-top: 30%;
@@ -13,11 +13,24 @@
     font-size: 50px;
 }
 
+.mojgumb {
+    transition: none;
+    transition-timing-function: none;
+    animation-iteration-count: 0;
+    border-radius:5px;
+
+}
+
+.btn:active {
+    border-style: outset;
+}
+
 .btn:hover {
     color:black;
     background-color:white;
     border-color:black;
     box-shadow: none;
+    border-style: outset;
 }
 
 

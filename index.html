@@ -5,10 +5,6 @@
         <meta charset="utf-8">
         <title>Izberi Hrano</title>
 
-        <!-- Koda -->
-        <script type="text/javascript" src="scripts/main.js" async></script>
-
-
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -29,21 +25,25 @@
     <body>
         <div class="vertically-centered">
             <div class="container-fluid">
-                <div id="rezultat" class="disabled btn btn-outline-dark btn-lg"></div>
+                <div id="rezultat" class="mojgumb gumbvelik"></div>
             </div>
 
             <div class="container-fluid">
-                <button id="izginujoci" type="button" class="btn btn-outline-dark btn-lg" onclick="MetKovanca()">Kovanec</button>
+                <button id="izginujoci" type="button" class="mojgumb gumbvelik" onclick="MetKovanca()">Kovanec</button>
             </div>
         
             <div class="container-fluid">
-                <button id ="spreminjajoci" type="button" class="btn btn-outline-dark btn-lg" onclick="IzbiraVrste()">Kuhinja</button>
+                <button id ="spreminjajoci" type="button" class="mojgumb gumbvelik" onclick="IzbiraVrste()">Kuhinja</button>
             </div>
         
             <div class="container-fluid">
-                <button id = "izbirajoci" type="button" class="btn btn-outline-dark btn-lg" onclick="Restavracija()">Restavracija</button>
+                <button id = "izbirajoci" type="button" class="mojgumb gumbvelik" onclick="izbiraLokacije()">Restavracija</button>
             </div>
         </div>
+
+        <!-- Koda -->
+        <script type="text/javascript" src="scripts/main.js" async></script>
+
     </body>
 
 </html>

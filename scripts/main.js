@@ -1,13 +1,20 @@
-const Kuhinje = ["azijska", "kitajska", "indijska", "ameriška", "slovenska", "morska", "italijanska"]
+const Kuhinje = ["azijska", "kitajska", "indijska", "ameriška", "slovenska", "morska", "italijanska"];
+var lokacija = "";
+var gumb1_rezultat = document.getElementById("rezultat");
+var gumb2_izginujoci = document.getElementById("izginujoci");
+var gumb3_spreminjajoci = document.getElementById("spreminjajoci");
+var gumb4_izbirajoci = document.getElementById("izbirajoci")
+
+
 
 function MetKovanca(){
     var kovanec = Math.random();
     console.log(kovanec);
     if(kovanec<0.5){
-        document.getElementById("rezultat").innerHTML = "<img src='./images/glava.png' alt='glava'></img>";
+        gumb1_rezultat.innerHTML = "<img src='./images/glava.png' alt='glava'></img>";
     }
     else{
-        document.getElementById("rezultat").innerHTML = "<img src='./images/cifra.png' alt='cifra'></img>";
+        gumb1_rezultat.innerHTML = "<img src='./images/cifra.png' alt='cifra'></img>";
     }
     //setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 5000);
 
@@ -15,30 +22,61 @@ function MetKovanca(){
 
 function IzbiraVrste(){
     index = Math.floor(Math.random()*Kuhinje.length);
-    document.getElementById("rezultat").innerHTML = Kuhinje[index] + " hrana";
+    gumb1_rezultat.innerHTML = Kuhinje[index] + " hrana";
     //setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 10000);
 }
 
+function demiDomSelect(){
+    lokacija = "Medenska cesta 55";
+    Restavracija()
+}
+
+function domenDomSelect(){
+    lokacija = "Hubadova ulica 39";
+    Restavracija()
+}
+
+function centerSelect(){
+    lokacija = "Center";
+    Restavracija()
+}
+
+
+
 function izbiraLokacije(){
     //Trije gumbi: Demi dom, Domen dom, Center
-    document.getElementById("rezultat").style.display = "none"
+    gumb1_rezultat.style.display = "none";
+
+    gumb2_izginujoci.innerHTML = "Demi dom";
+    gumb2_izginujoci.onclick = demiDomSelect;
+
+    gumb3_spreminjajoci.innerHTML = "Domen dom";
+    gumb3_spreminjajoci.onclick = domenDomSelect;
+
+
+    gumb4_izbirajoci.innerHTML = "Center";
+    gumb4_izbirajoci.onclick = centerSelect;
+
 
 }
 
 function Restavracija(){
 
     // Change window into Restavracija without needing another page
-    document.getElementById("rezultat").classList.add("restavracija-rezultat");
-    document.getElementById("rezultat").classList.remove("btn-lg");
+    gumb1_rezultat.style.display = "block";
+    gumb1_rezultat.innerHTML = "";
+    gumb1_rezultat.classList.add("restavracija-rezultat");
+    gumb1_rezultat.classList.remove("gumbvelik");
 
-    document.getElementById("izginujoci").style.display = "none";
+    gumb2_izginujoci.style.display = "none";
 
-    document.getElementById("spreminjajoci").classList.remove("btn-lg");
-    document.getElementById("spreminjajoci").classList.add("nazaj");
-    document.getElementById("spreminjajoci").onclick = Nazaj;
-    document.getElementById("spreminjajoci").innerHTML = "Nazaj"
+    gumb3_spreminjajoci.classList.remove("gumbvelik");
+    gumb3_spreminjajoci.classList.add("nazaj");
+    gumb3_spreminjajoci.onclick = Nazaj;
+    gumb3_spreminjajoci.innerHTML = "Nazaj";
 
-    document.getElementById("izbirajoci").innerHTML = "Izberi drugo"
+    gumb4_izbirajoci.innerHTML = "Izberi drugo";
+    gumb4_izbirajoci.onclick = drugaRestavracija;
 }
 
 function Nazaj(){
