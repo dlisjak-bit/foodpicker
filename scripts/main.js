@@ -3,7 +3,13 @@ var lokacija = "";
 var gumb1_rezultat = document.getElementById("rezultat");
 var gumb2_izginujoci = document.getElementById("izginujoci");
 var gumb3_spreminjajoci = document.getElementById("spreminjajoci");
-var gumb4_izbirajoci = document.getElementById("izbirajoci")
+var gumb4_izbirajoci = document.getElementById("izbirajoci");
+
+var demiDom_restavracije = ["Park Žibert", "McDonald's", "Flying Smoker"];
+var domenDom_restavracije = [];
+var center_restavracije = [];
+
+var izbrana_lokacija_restavracije;
 
 
 
@@ -28,17 +34,20 @@ function IzbiraVrste(){
 
 function demiDomSelect(){
     lokacija = "Medenska cesta 55";
-    Restavracija()
+    izbrana_lokacija_restavracije = demiDom_restavracije;
+    Restavracija();
 }
 
 function domenDomSelect(){
     lokacija = "Hubadova ulica 39";
-    Restavracija()
+    izbrana_lokacija_restavracije = domenDom_restavracije;
+    Restavracija();
 }
 
 function centerSelect(){
     lokacija = "Center";
-    Restavracija()
+    izbrana_lokacija_restavracije = center_restavracije;
+    Restavracija();
 }
 
 
@@ -60,6 +69,13 @@ function izbiraLokacije(){
 
 }
 
+function novaRestavracija(){
+    // Choose random restaurant from the list at the location
+    index = Math.floor(Math.random()*izbrana_lokacija_restavracije.length);
+    izbrana_restavracija = izbrana_lokacija_restavracije[index];
+    gumb1_rezultat.innerHTML = izbrana_restavracija;
+}
+
 function Restavracija(){
 
     // Change window into Restavracija without needing another page
@@ -76,7 +92,9 @@ function Restavracija(){
     gumb3_spreminjajoci.innerHTML = "Nazaj";
 
     gumb4_izbirajoci.innerHTML = "Izberi drugo";
-    gumb4_izbirajoci.onclick = drugaRestavracija;
+    gumb4_izbirajoci.onclick = novaRestavracija;
+
+    novaRestavracija();
 }
 
 function Nazaj(){
