@@ -5,9 +5,9 @@ var gumb2_izginujoci = document.getElementById("izginujoci");
 var gumb3_spreminjajoci = document.getElementById("spreminjajoci");
 var gumb4_izbirajoci = document.getElementById("izbirajoci");
 
-var demiDom_restavracije = ["Park Žibert", "McDonald's", "Flying Smoker"];
-var domenDom_restavracije = [];
-var center_restavracije = [];
+var demiDom_restavracije = ["Park Žibert", "McDonald's", "Flying Smoker", "Svetilnik", "Picarole", "Kitajc"];
+var domenDom_restavracije = ["lokacije incoming"];
+var center_restavracije = ["ni se dodano"];
 
 var izbrana_lokacija_restavracije;
 
