@@ -21,14 +21,27 @@ function IzbiraVrste(){
 
 function Restavracija(){
     var currentUrl = window.location.href;
-    console.log(currentUrl);
+    //console.log(currentUrl);
     currentUrl = currentUrl.slice(0,-10);
-    window.location = currentUrl + "pages/restavracija.html";
+    //window.location = currentUrl + "pages/restavracija.html";
+    
+
+    // Change window into Restavracija without needing another page
+    document.getElementById("rezultat").classList.add("restavracija-rezultat");
+    document.getElementById("rezultat").classList.remove("btn-lg");
+
+    document.getElementById("izginujoci").style.display = "none";
+
+    document.getElementById("spreminjajoci").classList.remove("btn-lg");
+    document.getElementById("spreminjajoci").classList.add("nazaj");
+    document.getElementById("spreminjajoci").onclick = Nazaj;
+    document.getElementById("spreminjajoci").innerHTML = "Nazaj"
+
+    document.getElementById("izbirajoci").innerHTML = "Izberi drugo"
 }
 
 function Nazaj(){
-    var currentUrl = window.location.href;
-    console.log(currentUrl);
-    currentUrl = currentUrl.slice(0,-23);
-    window.location = currentUrl + "index.html";
+
+    // Revert changes into stock index.html
+    window.location.reload();
 }
