@@ -15,6 +15,7 @@
 
 
 
+
 .vertically-centered{
     position:absolute;
     top:50%;
@@ -23,3 +24,13 @@
     transform: translate(-50%, -50%);
 }
 
+.disabled{
+    vertical-align:middle;
+}
+
+img {
+    position:relative;
+    top:50%;
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}

@@ -1,18 +1,14 @@
-
-
-var kovanec
+const Kuhinje = [azijska, kitajska, indijska, ameriška, slovenska, morska, italijanska]
 
 function MetKovanca(){
-    kovanec = Math.random();
+    var kovanec = Math.random();
     console.log(kovanec);
     if(kovanec<0.5){
-        kovanec = "glava"
+        document.getElementById("rezultat").innerHTML = "<img src='./images/glava.png' alt='glava'></img>";
     }
     else{
-        kovanec = "cifra"
+        document.getElementById("rezultat").innerHTML = "<img src='./images/cifra.png' alt='cifra'></img>";
     }
-    console.log(kovanec)
-    document.getElementById("rezultat").innerHTML = kovanec;
     setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 5000);
 
 }
