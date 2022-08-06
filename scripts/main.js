@@ -19,12 +19,13 @@ function IzbiraVrste(){
     //setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 10000);
 }
 
+function izbiraLokacije(){
+    //Trije gumbi: Demi dom, Domen dom, Center
+    document.getElementById("rezultat").style.display = "none"
+
+}
+
 function Restavracija(){
-    var currentUrl = window.location.href;
-    //console.log(currentUrl);
-    currentUrl = currentUrl.slice(0,-10);
-    //window.location = currentUrl + "pages/restavracija.html";
-    
 
     // Change window into Restavracija without needing another page
     document.getElementById("rezultat").classList.add("restavracija-rezultat");
