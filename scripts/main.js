@@ -9,14 +9,14 @@ function MetKovanca(){
     else{
         document.getElementById("rezultat").innerHTML = "<img src='./images/cifra.png' alt='cifra'></img>";
     }
-    setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 5000);
+    //setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 5000);
 
 }
 
 function IzbiraVrste(){
     index = Math.floor(Math.random()*Kuhinje.length);
     document.getElementById("rezultat").innerHTML = Kuhinje[index] + " hrana";
-    setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 10000);
+    //setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 10000);
 }
 
 function Restavracija(){
