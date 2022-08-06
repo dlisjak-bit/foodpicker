@@ -6,10 +6,11 @@
 
 .btn-lg {
     height:100px;
-    width: 500px;
+    width: 600px;
     padding-top: 30%;
     padding-bottom: 30%;
     line-height:0;
+    font-size: 50px;
 }
 
 
@@ -21,3 +22,4 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
