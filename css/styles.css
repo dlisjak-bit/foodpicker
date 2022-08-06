@@ -1,0 +1,9 @@
+.container-fluid{
+    text-align: center;
+    padding: 20px;
+    height: 300%;
+}
+
+.btn {
+    height:25%;
+}
