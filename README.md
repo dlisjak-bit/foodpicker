@@ -1,5 +1,6 @@
 # Food Site
 Razdeljen na tri gumbe. Za telefone. 
+https://dlisjak-bit.github.io/foodpicker/index.html
 
 ## Vrzi kovanec
 Prepost gumb, ki vrže kovanec in vrne cifro ali glavo. RNG.
