@@ -54,7 +54,9 @@ function centerSelect(){
 
 function izbiraLokacije(){
     //Trije gumbi: Demi dom, Domen dom, Center
-    gumb1_rezultat.style.display = "none";
+    gumb1_rezultat.innerHTML = "";
+    gumb1_rezultat.classList.add("neviden-rezultat");
+    gumb1_rezultat.classList.remove("gumbvelik");
 
     gumb2_izginujoci.innerHTML = "Demi dom";
     gumb2_izginujoci.onclick = demiDomSelect;
@@ -79,10 +81,9 @@ function novaRestavracija(){
 function Restavracija(){
 
     // Change window into Restavracija without needing another page
-    gumb1_rezultat.style.display = "block";
     gumb1_rezultat.innerHTML = "";
     gumb1_rezultat.classList.add("restavracija-rezultat");
-    gumb1_rezultat.classList.remove("gumbvelik");
+    gumb1_rezultat.classList.remove("neviden-rezultat");
 
     gumb2_izginujoci.style.display = "none";
 
@@ -100,5 +101,22 @@ function Restavracija(){
 function Nazaj(){
 
     // Revert changes into stock index.html
-    window.location.reload();
+    gumb1_rezultat.classList.remove("restavracija-rezultat");
+    gumb1_rezultat.classList.add("gumbvelik");
+    gumb1_rezultat.innerHTML = ""
+
+    gumb2_izginujoci.style.display = "block";
+    gumb2_izginujoci.innerHTML = "Kovanec"
+    gumb2_izginujoci.onclick = MetKovanca;
+
+    gumb3_spreminjajoci.classList.remove("nazaj");
+    gumb3_spreminjajoci.classList.add("gumbvelik");
+    gumb3_spreminjajoci.onclick = IzbiraVrste;
+    gumb3_spreminjajoci.innerHTML = "Kuhinja";
+
+    gumb4_izbirajoci.onclick = izbiraLokacije;
+    gumb4_izbirajoci.innerHTML = "Restavracija";
+
+
+    //window.location.reload();
 }

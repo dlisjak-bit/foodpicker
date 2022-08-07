@@ -21,8 +21,14 @@
     background-color:transparent;
     color:black;
     border-color:black;
-
+    transition: 1s;
 }
+
+.mojgumb:active {
+    background-color: #515151;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
 
@@ -35,6 +41,11 @@
     font-size: 50px;
 }
 
+
+.neviden-rezultat{
+    height: 0px;
+    padding: 0px;
+}
 .restavracija-rezultat{
     height:800px;
     width: 600px;
