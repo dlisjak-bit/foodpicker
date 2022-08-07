@@ -89,7 +89,9 @@ function Restavracija(){
     gumb1_rezultat.classList.add("restavracija-rezultat");
     gumb1_rezultat.classList.remove("neviden-rezultat");
 
-    gumb2_izginujoci.style.display = "none";
+    gumb2_izginujoci.innerHTML = "";
+    gumb2_izginujoci.classList.add("neviden-rezultat");
+    gumb2_izginujoci.classList.remove("gumbvelik");
 
     gumb3_spreminjajoci.classList.remove("gumbvelik");
     gumb3_spreminjajoci.classList.add("nazaj");
@@ -109,7 +111,9 @@ function Nazaj(){
     gumb1_rezultat.classList.add("gumbvelik");
     gumb1_rezultat.innerHTML = ""
 
-    gumb2_izginujoci.style.display = "block";
+    
+    gumb2_izginujoci.classList.remove("neviden-rezultat");
+    gumb2_izginujoci.classList.add("gumbvelik");
     gumb2_izginujoci.innerHTML = "Kovanec"
     gumb2_izginujoci.onclick = MetKovanca;
 

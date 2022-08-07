@@ -18,7 +18,7 @@
     background-color:transparent;
     color:black;
     border-color:black;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .mojgumb:active {
@@ -41,7 +41,10 @@
 
 .neviden-rezultat{
     height: 0px;
+    width: 600px;
     padding: 0px;
+    border: 0px;
+    transition: 1s;
 }
 .restavracija-rezultat{
     height:800px;
@@ -93,7 +96,7 @@ img {
 
 .izbranka_restavracija{
     animation-name: animacijaTeksta;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 .refresh-gumb{
@@ -106,7 +109,7 @@ img {
     background-color:transparent;
     color:black;
     border-color:black;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .refresh-gumb:active {
