@@ -14,9 +14,6 @@
 }
 
 .mojgumb {
-    transition: none;
-    transition-timing-function: none;
-    animation-iteration-count: 0;
     border-radius:15px;
     background-color:transparent;
     color:black;
@@ -83,3 +80,24 @@ img {
     -ms-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
 }
+
+.refresh-gumb{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius:15px;
+    background-color:transparent;
+    color:black;
+    border-color:black;
+    transition: 1s;
+}
+
+.refresh-gumb:active {
+    background-color: #515151;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
