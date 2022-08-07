@@ -70,9 +70,16 @@
     vertical-align:middle;
 }
 
+@keyframes animacijaSlike {
+    from {width: 0px;}
+    to {width: 215px;}
+}
+
 img {
     position:relative;
     top:50%;
+    animation-name: animacijaSlike;
+    animation-duration: 0.5s;
     -ms-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
 }
