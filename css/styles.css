@@ -81,6 +81,21 @@ img {
     transform: translate(0%, -50%);
 }
 
+@keyframes animacijaTeksta {
+    from {font-size: 2px;}
+    to {font-size: 50px;}
+}
+
+.izbranka {
+    animation-name: animacijaTeksta;
+    animation-duration: 0.5s;
+}
+
+.izbranka_restavracija{
+    animation-name: animacijaTeksta;
+    animation-duration: 2s;
+}
+
 .refresh-gumb{
     position: absolute;
     top: 30px;

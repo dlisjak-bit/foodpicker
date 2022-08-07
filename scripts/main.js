@@ -6,11 +6,15 @@ var gumb3_spreminjajoci = document.getElementById("spreminjajoci");
 var gumb4_izbirajoci = document.getElementById("izbirajoci");
 
 var demiDom_restavracije = ["Park Žibert", "McDonald's", "Flying Smoker", "Svetilnik", "Picarole", "Kitajc"];
-var domenDom_restavracije = ["lokacije incoming"];
+var domenDom_restavracije = ["McDonald's", "Roza Slon", "Dobra vila", "Pica Marija", "Picarole", "Han Aleja", "Tloft", "Foculus", "Mehiška", "Subway"];
 var center_restavracije = ["ni se dodano"];
 
 var izbrana_lokacija_restavracije;
 
+
+function Refresh(){
+    window.location.reload();
+}
 
 
 function MetKovanca(){
@@ -28,7 +32,7 @@ function MetKovanca(){
 
 function IzbiraVrste(){
     index = Math.floor(Math.random()*Kuhinje.length);
-    gumb1_rezultat.innerHTML = Kuhinje[index] + " hrana";
+    gumb1_rezultat.innerHTML = "<p class='izbranka'>" + Kuhinje[index] + " hrana" + "</p>";
     //setTimeout(() => { document.getElementById("rezultat").innerHTML = ""; }, 10000);
 }
 
@@ -75,7 +79,7 @@ function novaRestavracija(){
     // Choose random restaurant from the list at the location
     index = Math.floor(Math.random()*izbrana_lokacija_restavracije.length);
     izbrana_restavracija = izbrana_lokacija_restavracije[index];
-    gumb1_rezultat.innerHTML = izbrana_restavracija;
+    gumb1_rezultat.innerHTML = "<p class='izbranka_restavracija'>" + izbrana_restavracija + "</p>";
 }
 
 function Restavracija(){
